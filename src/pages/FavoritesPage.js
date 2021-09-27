@@ -15,9 +15,7 @@ function FavoritesPage() {
 
       <Button onClick={() => history.push("/")}>Go Back</Button>
 
-      <Results data={favorites} />
-      { !favorites?.length && <Alert severity="info">You have not selected a favorite yet!</Alert> }
-
+      { favorites?.length ? <Results data={favorites} /> : <Alert severity="info">You have not selected a favorite yet!</Alert> }
     </Fragment>
   )
 }
